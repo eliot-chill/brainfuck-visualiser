@@ -15,3 +15,25 @@ body {
 .bf-text {
     font-size: 1.5em;
 }
+
+.bf-input, .bf-output {
+    font-size: 18pt;
+    height: 300px;
+    width: 600px;
+    resize: both;
+}
+
+
+
+.bf-button {
+    background-color: #66a300;
+    /* Olive green */
+    border: none;
+    color: white;
+    display: inline-block;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    margin-top: 10px;
+}

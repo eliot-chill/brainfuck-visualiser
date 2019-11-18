@@ -1,15 +1,32 @@
 <html>
 
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
-  <script src="sketch.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-<h1 class="bf bf-title">Brainfuck Visualiser</h1>
-<a href="https://en.wikipedia.org/wiki/Brainfuck"><p class="bf bf-text">Wiki</p></a>
-<hr>
+  <h1 class="bf bf-title">Brainfuck Visualiser</h1>
+  <a href="https://en.wikipedia.org/wiki/Brainfuck">
+    <p class="bf bf-text">Wiki</p>
+  </a>
+  <hr>
+  <div>
+    <div style="float:right;">
+      <textarea readonly id="bfOutput" class="bf-output"></textarea>
+    </div>
+    <div>
+      <textarea id="bfInput" class="bf-input"></textarea>
+    </div>
+
+    <div>
+      <button class="bf-button" id="run">Run</button>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+  <script src="brainfuck.js"></script>
 </body>
 
 </html>
