@@ -98,39 +98,19 @@ function endLoop() {
         }
     }
 }
+var instructions = {};
+instructions[">"] = moveRight;
+instructions["<"] = moveLeft;
+instructions["+"] = incrementCell;
+instructions["-"] = decrementCell;
+instructions["."] = outputValue;
+instructions[","] = inputValue;
+instructions["["] = startLoop;
+instructions["]"] = endLoop;
 
 function stepInstruction() {
-    if (inputHead < input.length) {
-        //for (inputHead; inputHead < input.length; inputHead++) {
-        // console.log("Instruction: " + input[inputHead]);
-        switch (input[inputHead]) {
-            case ">":
-                moveRight();
-                break;
-            case "<":
-                moveLeft();
-                break;
-            case "+":
-                incrementCell();
-                break;
-            case "-":
-                decrementCell();
-                break;
-            case ".":
-                outputValue();
-                break;
-            case ",":
-                inputValue();
-                break;
-            case "[":
-                startLoop();
-                break;
-            case "]":
-                endLoop();
-                break;
-        }
-        // console.log("Cell: " + tape[tapeHead]);
-        // console.log("------");
+    if (inputHead < input.length && instructions.hasOwnProperty(input[inputHead])) {
+        instructions[input[inputHead]]();
         inputHead++;
     }
 }
